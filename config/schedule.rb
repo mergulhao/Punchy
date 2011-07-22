@@ -23,8 +23,9 @@ env :PATH, "/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games"
 env :RAILS_ENV, "production"
 job_type :command, "cd :path && :task :output"
 set :job_template, nil
-set :output, "/home/railsapps/punchy.mergulhao.info/shared/log/whenever.log"
+set :output, "/home/railsapps/punchy/shared/log/whenever.log"
 
 every 1.minute do
-  rake "whenever:create_punch"
+  runner "Punch.create(:body => Time.now.to_s(:db))"
+  # rake "whenever:create_punch"
 end
