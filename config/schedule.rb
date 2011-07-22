@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 1.minute do
-  runner "Punch.create(:body => ("auto__" + Time.now.to_s(:db)))"
+  runner "Punch.create(:body => Time.now.to_s(:db))"
 end
