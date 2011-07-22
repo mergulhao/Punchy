@@ -27,5 +27,4 @@ set :output, "/home/railsapps/punchy/shared/log/whenever.log"
 
 every 1.minute do
   runner "Punch.create(:body => Time.now.to_s(:db))"
-  # rake "whenever:create_punch"
 end

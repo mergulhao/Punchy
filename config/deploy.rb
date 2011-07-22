@@ -2,7 +2,8 @@ require 'bundler/capistrano'
 set :whenever_command, "bundle exec whenever"
 require 'whenever/capistrano'
 
-set :application, "punchy.mergulhao.info"
+set :domain, "punchy.mergulhao.info"
+set :application, "punchy"
 set :repository,  "git://github.com/mergulhao/Punchy.git"
 
 set :user, "railsapps"
@@ -10,7 +11,7 @@ set :use_sudo, false
 set :deploy_to, "/home/#{user}/#{application}"
 set :scm, :git
 
-server application, :app, :web, :db, :primary => true
+server domain, :app, :web, :db, :primary => true
 after "deploy:update_code", "deploy:custom_symlinks"
 
 namespace :deploy do
