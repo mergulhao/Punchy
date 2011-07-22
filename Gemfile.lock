@@ -83,5 +83,5 @@ DEPENDENCIES
   gchartrb
   rails (= 3.0.0)
   sqlite3-ruby
-  whenever
+  whenever (= 0.6.8)
   will_paginate
