@@ -46,6 +46,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mysql2 (0.2.11)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-ssh (2.1.4)
     polyglot (0.3.1)
     rack (1.2.3)
     rack-mount (0.6.14)
@@ -86,6 +89,8 @@ DEPENDENCIES
   backup (= 3.0.16)
   gchartrb
   mysql2 (= 0.2.11)
+  net-scp (~> 1.0.4)
+  net-ssh (~> 2.1.3)
   rails (= 3.0.0)
   sqlite3-ruby
   whenever (= 0.6.8)
