@@ -14,13 +14,11 @@ namespace :restore do
     end
   end
 
-  task :download do
+  task :run do
     Net::SSH.start(HOST, USER) do |ssh|
       ssh.scp.download! "#{BACKUPDIR}/#{ENV['FILE']}", TMPFILE
     end
-  end
-
-  task :run do
+    
     `mv #{APPDIR} #{OLDAPPDIR}`
     `cd /tmp`
     `tar xvf #{TMPFILE}`
