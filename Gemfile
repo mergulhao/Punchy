@@ -8,6 +8,7 @@ gem 'mysql2', '0.2.11'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'whenever', '0.6.8'
+gem 'backup', '3.0.16'
 
 # Use unicorn as the web server
 # gem 'unicorn'
