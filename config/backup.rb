@@ -24,12 +24,12 @@ Backup::Model.new(:punchy, 'Punchy Backup') do
   # MySQL [Database]
   #
   database MySQL do |db|
-    db.name               = "-B punchy_production"
+    db.name               = "punchy_production"
     db.username           = "root"
     db.password           = ""
     db.host               = "localhost"
     db.port               = 3306
-    db.additional_options = ['--quick', '--single-transaction', '--add-drop-database']
+    db.additional_options = ['--quick', '--single-transaction', '--add-drop-database', '-B punchy_production']
   end
 
   ##
