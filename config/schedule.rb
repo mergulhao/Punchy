@@ -28,3 +28,7 @@ set :output, "/home/railsapps/punchy/shared/log/whenever.log"
 #every 1.day, :at => '5pm' do
 #  rake "whenever:create_punch"
 #end
+
+every 5.minutes do
+  command "bundle exec backup perform -t punchy -c config/backup.rb"
+end
